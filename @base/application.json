@@ -1,0 +1,11 @@
+{
+    "type": "web",
+    "exists": true,
+    "domain": "khanalcwani.com",
+    "basepath": "/",
+    "projectId": "8ee8a982-efe9-4409-b12a-d94aa71aedf7",
+    "permissions": [
+        "geolocation",
+        "notifications"
+    ]
+}
