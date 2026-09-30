@@ -9,7 +9,6 @@ import {
   featuredProjects,
   learningTracks,
   mediaChannels,
-  writingHighlights,
 } from "@/lib/site-data";
 import { buildMetadata, buildWebPageSchema } from "@/lib/seo";
 
@@ -93,22 +92,13 @@ export default function HomePage() {
         title="Articles, notes, and ideas in progress."
         description="Some thoughts deserve an essay. Others are sharper when left as a note."
       >
-        <div className="grid gap-6 lg:grid-cols-2">
-          {writingHighlights.map((entry) => (
-            <article key={entry.title} className="card-surface p-8">
-              <p className="text-xs uppercase tracking-[0.28em] text-bronze">{entry.type}</p>
-              <h3 className="mt-4 font-display text-3xl">
-                {entry.href ? (
-                  <Link href={entry.href} className="transition hover:text-bronze">
-                    {entry.title}
-                  </Link>
-                ) : (
-                  entry.title
-                )}
-              </h3>
-              <p className="mt-4 copy-muted">{entry.excerpt}</p>
-            </article>
-          ))}
+        <div className="card-surface p-8 lg:p-10">
+          <p className="max-w-2xl copy-muted">
+            Follow the latest essays and observations from the blog archive.
+          </p>
+          <Link href="/blogs" className="mt-6 inline-flex text-sm font-medium text-bronze transition hover:text-ink">
+            Visit the blogs <span aria-hidden="true" className="ml-2">→</span>
+          </Link>
         </div>
       </Section>
 

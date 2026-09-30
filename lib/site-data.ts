@@ -59,22 +59,6 @@ export const capabilities = [
   "Business communication and documentation",
 ];
 
-export const writingHighlights = [
-  {
-    title: "I started my Cookie Jar.",
-    type: "Article",
-    excerpt:
-      "A personal note on growth, small consistent actions, and why this website exists as part of my journey.",
-    href: "/blog/i-started-my-cookie-jar-h2hj34v24kjb34",
-  },
-  {
-    title: "What Nepali brands still underinvest in",
-    type: "Note",
-    excerpt:
-      "A short observation on clarity, consistency, and why communication quality often lags behind product ambition.",
-  },
-];
-
 export const learningTracks = [
   {
     title: "Business and Entrepreneurship",

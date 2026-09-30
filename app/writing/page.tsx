@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Section } from "@/components/section";
 import { SchemaScript } from "@/components/schema-script";
-import { libraryShelves, writingHighlights } from "@/lib/site-data";
+import { libraryShelves } from "@/lib/site-data";
 import { buildMetadata, buildWebPageSchema } from "@/lib/seo";
 import Link from "next/link";
 
@@ -37,22 +37,14 @@ export default function WritingPage() {
         title="Writing that can grow into an archive."
         description="The goal is consistent publishing without forcing every thought into a formal article."
       >
-        <div className="grid gap-6 lg:grid-cols-2">
-          {writingHighlights.map((entry) => (
-            <article key={entry.title} className="card-surface p-8">
-              <p className="text-xs uppercase tracking-[0.28em] text-bronze">{entry.type}</p>
-              <h3 className="mt-4 font-display text-3xl">
-                {entry.href ? (
-                  <Link href={entry.href} className="transition hover:text-bronze">
-                    {entry.title}
-                  </Link>
-                ) : (
-                  entry.title
-                )}
-              </h3>
-              <p className="mt-4 copy-muted">{entry.excerpt}</p>
-            </article>
-          ))}
+        <div className="card-surface p-8 lg:p-10">
+          <p className="max-w-2xl copy-muted">
+            Visit the blog for essays and observations, or browse the reading shelves below for the ideas
+            currently shaping the work.
+          </p>
+          <Link href="/blogs" className="mt-6 inline-flex text-sm font-medium text-bronze transition hover:text-ink">
+            Visit the blogs <span aria-hidden="true" className="ml-2">→</span>
+          </Link>
         </div>
       </Section>
 
