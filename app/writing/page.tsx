@@ -57,6 +57,13 @@ export default async function WritingPage() {
         <div className="grid gap-6 lg:grid-cols-2">
           {articles.map((post, index) => (
             <article key={post.slug} className="card-surface flex min-h-[14rem] flex-col justify-between p-6 lg:p-7">
+              {post.coverImageUrl ? (
+                <img
+                  src={post.coverImageUrl}
+                  alt={post.title}
+                  className="mb-5 aspect-[16/8] w-full rounded-[1.25rem] object-cover"
+                />
+              ) : null}
               <div>
                 <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.28em] text-bronze">
                   <span>{post.tags[0] ?? "Article"}</span>
