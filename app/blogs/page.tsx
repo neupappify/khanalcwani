@@ -71,23 +71,23 @@ export default async function BlogsPage() {
       >
         <div className="grid gap-6 lg:grid-cols-2">
           {articles.map((post, index) => (
-            <article key={post.slug} className="card-surface flex min-h-[18rem] flex-col justify-between p-8 lg:p-10">
+            <article key={post.slug} className="card-surface flex min-h-[14rem] flex-col justify-between p-6 lg:p-7">
               <div>
                 <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.28em] text-bronze">
                   <span>{post.tags[0] ?? "Article"}</span>
                   <span>0{index + 1}</span>
                 </div>
-                <h2 className="mt-6 max-w-xl font-display text-4xl leading-tight">
+                <h2 className="mt-4 max-w-xl font-display text-3xl leading-tight">
                   <Link href={`/blogs/${post.slug}`} className="transition hover:text-bronze">
                     {post.title}
                   </Link>
                 </h2>
-                <p className="mt-5 max-w-xl leading-7 text-ink/65">
+                <p className="mt-3 max-w-xl text-sm leading-6 text-ink/65">
                   {post.metaDescription ?? "Read the latest ideas, observations, and lessons from the work."}
                 </p>
               </div>
 
-              <Link href={`/blogs/${post.slug}`} className="mt-8 inline-flex text-sm font-medium text-bronze transition hover:text-ink">
+              <Link href={`/blogs/${post.slug}`} className="mt-5 inline-flex text-sm font-medium text-bronze transition hover:text-ink">
                 Read post <span aria-hidden="true" className="ml-2">→</span>
               </Link>
             </article>
